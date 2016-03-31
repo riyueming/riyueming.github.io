@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+	
+    <title>和园生活驿站</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+	<script>
+			
+        var xmlHttpRequest, username, password;
+			function check() {
+				username = $("#username").val();
+				password = $("#password").val();
+				if(username == "") {
+					alert("请输入用户名！");
+					return false;
+				}
+				if(password == "") {
+					alert("请输入密码！");
+					return false;
+				}
+				return true;
+			}
+			function login() {
+				if(check()) {
+					xmlHttpRequest = new XMLHttpRequest();
+					xmlHttpRequest.open("post", "UserController", true);
+					xmlHttpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+					var msg = "method=login&username=" + username + "&password=" + password;
+					xmlHttpRequest.send(msg);
+					xmlHttpRequest.onreadystatechange = action_login;
+					alert("OK");
+				}
+			}
+			function action_login() {
+				if(xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200) {
+					var res = xmlHttpRequest.responseText.split("-");
+					if(res.length == 1) {
+						alert(res[0]);
+					}
+					else {
+						location.href = res[1];
+					}
+				}
+			}
+			
+		</script>
+</head>
+<body>
+    <nav class="nav_top">
+        <div class="bottom_l fl">
+            <a href="home.html">
+                <img src="images/icon/back.png">
+            </a>
+        </div>
+        <div class="top_c">
+             <p class="text_YaHei">和园生活驿站</p>
+        </div>	
+    </nav>
+
+    /*内容部分*/
+    <div class="login_contanter comWidth">
+        <div class="login_name" >
+            <input type="text" class="name_text text_YaHei text_size" id="username" value="请输入用户名/手机号/邮箱" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/>
+        </div>
+
+        <div class="login_name" >
+            <input type="password" class="name_text text_YaHei text_size" id="password" value="请输入密码" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"/>
+        </div>
+		
+		<div class="login_name">
+            <input type="button" class="button login_btn" value="登 录" onclick="login();" />
+        </div>
+		<div class="login_name">
+            <a href="new.html"><input type="button" class="login_btn button" value="注 册"/></a>
+        </div>
+		<div class="login_name">
+            <a href="#" class="text_size text_YaHei text_center">找回密码？</a>
+        </div>
+    </div>
+
+
+    <nav class="nav_footer">
+        <div class="bottom_l fl">
+            <a href="home.html">
+                <img src="images/icon/back.png">
+                <p class="text_center text_YaHei">返回</p>
+            </a>
+        </div>
+        <div class="bottom_c">
+            <a href="index.html">
+                <img src="images/icon/home.png">
+                <p class="text_center text_YaHei">首页</p>
+            </a>
+        </div>
+        <div class="bottom_r fr">
+            <a href="home.html">
+                <img src="images/icon/man.png">
+                <p class="text_center text_YaHei">我的</p>
+            </a>
+        </div>
+    </nav>
+
+</body>
+</html>
