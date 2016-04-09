@@ -10,7 +10,40 @@
 </head>
 <body>
 
-    <div class="index_banner">
+    <div class="container" id="container">
+
+        <div class="left_nav">
+            <div class="left_z_nav_div">
+                <div class="left_nav_div">
+                    <p class="text_YaHei text_size">导航</p>
+                </div>
+                <div class="left_nav_div">
+                    <p class="text_YaHei text_size">搜索</p>
+                </div>
+                <div class="left_nav_div">
+                    <p class="text_YaHei text_size">主页</p>
+                </div>
+                <div class="left_nav_div">
+                    <a href="home.html"><p class="text_YaHei text_size">我的</p></a>
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="nav_top">
+            <div class="top_c">
+                <p class="text_YaHei">和园生活驿站</p>
+            </div>
+
+            <div class="top_l">
+                <br/>
+                <span id="btn">按钮</span>
+            </div>
+
+        </nav>
+
+
+    <div class="banner">
         <img src="images/banner/u24.jpg" width="100%">
     </div>
 
@@ -80,26 +113,23 @@
         </div>
     </div>
 
-    <nav class="nav_footer">
-        <div class="bottom_l fl">
-            <a href="http://www.baidu.com">
-                <img src="images/icon/search.png">
-                <p class="text_center text_YaHei">搜索</p>
-            </a>
-        </div>
-        <div class="bottom_c">
-            <a href="#">
-                <img src="images/icon/home.png">
-                <p class="text_center text_YaHei">首页</p>
-            </a>
-        </div>
-        <div class="bottom_r fr">
-            <a href="home.html">
-                <img src="images/icon/man.png">
-                <p class="text_center text_YaHei">我的</p>
-            </a>
-        </div>
-    </nav>
+
+</div>
+
+<script>
+        $("#btn").bind("click",function(){
+            var conLeft = parseInt($("#container").css("left"));
+            if(conLeft == "0"){
+                $("#container").animate({
+                    left:"40%"
+                },500);
+            }else{
+                $("#container").animate({
+                    left:"0"
+                },500);
+            }
+        });
+    </script>
 
 </body>
 </html>

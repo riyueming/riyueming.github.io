@@ -17,33 +17,12 @@
     color: black;
 }
 
-.text_ki{
-    font-family:"楷体";
-}
-
-.text_1{
-    width:auto; margin-top:12px;
-    float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size:11px;
-    color:#999999;
-    line-height:25px;
-    letter-spacing:1px
-}
 .text_size{
     font-size: 16px;
     display: inline-block;
     line-height: 100%;
 }
 
-.text_size_l{
-    font-size: 20px;
-    display: inline-block;
-    line-height: 100%;
-}
-
-.text_sj{
-    text-indent: 2em;
-}
 :root,body {
     font-family: "Microsoft YaHei" ! important;
     background-color:#ededed;
@@ -54,11 +33,6 @@
 }
 body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
 
-.leftArea{
-    float: left;
-    height: 100%;
-    width: 50%;
-}
 .center{
     display: inline-block;
     margin: auto;
@@ -68,17 +42,50 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
     background: grey;
 }
 
+
+.container{
+	position:relative;
+    left: 0%;
+}
 /*nav部分*/
+.left_nav{
+    background-color: #525253;
+    width: 40%;
+    position: absolute;
+    float: left;
+    left: -40%;
+    height: 100%;
+}
+
 
 .nav_top{
-    position: fixed;
+    position: absolute;
     width:100%;
     height:6%;
-    background:#EDEDED;
     top:0px;
     z-index:1000;
-
+	background-color:#EDEDED;
     border-bottom: grey solid 1px;
+}
+
+.left_z_nav_div{
+    width: 100%;
+    height: 240px;
+    margin-top: 50px;
+}
+
+.left_nav_div{
+    width: 100%;
+    height: 60px;
+}
+
+.left_nav_div p{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 20px;
 }
 
 .top_l{
@@ -99,27 +106,27 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
 .top_c p{
     display: inline-block;
     line-height: 40px;
-	font-size:16px
+    font-size:16px
 }
 
 .top_r{
-	position: absolute;
+    position: absolute;
     margin-left: 88%;
     margin-bottom:0px;
     height:100%;
-	line-height:100%;
-	margin-top:4%;
+    line-height:100%;
+    margin-top:4%;
 }
 
 .top_r p{
-	font-size:16px;
+    font-size:16px;
 }
 
 /*nav_bottom部分*/
 
 .nav_footer{
     width:100%;
-    height:10%;
+    height:8%;
     background:#EDEDED;
     position:fixed;
     bottom:0;
@@ -130,21 +137,21 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
 .bottom_r{
     position: absolute;
     margin-left: 88%;
-    margin-bottom:14px;
+    margin-bottom:8px;
     margin-top: 4px;
 }
 
 .bottom_c{
     position:absolute;
     margin-left:45%;
-    margin-bottom:14px;
+    margin-bottom:8px;
     margin-top: 4px;
 }
 
 .bottom_l{
     position: absolute;
     margin-left: 20px;
-    margin-bottom:14px;
+    margin-bottom:8px;
     margin-top: 4px;
 }
 
@@ -160,7 +167,7 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
 }
 
 .contanter{
-	
+    
     height: 500px;
 }
 
@@ -182,27 +189,10 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
 
 /*home页*/
 
-
-.home_banner{
-    margin-top:10%;
-    width: 100%;
-    height: 40%;
-    background: url("../images/banner/bbb.jpg") center no-repeat;
-}
-
-.home_uername{
-
-    width: 60%;
-    height: 60%;
-
-
-    margin-top: 10%;
-
-}
-
-.home_uername p{
-    display: inline-block;
-    margin-top: 20px;
+.home_contanter{
+	margin-top:10%;
+	width:100%;
+	height:500px;
 }
 
 .homeClass{
@@ -216,7 +206,7 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
     display: inline-block;
     height: 50%;
     width: 100%;
-    margin: 2% auto;
+    margin: 4% auto;
     text-align: left;
     font-size: 20px;
 
@@ -224,7 +214,7 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
 
 .homeClass_total{
     background: white;
-    height: 12%;
+    height: 16%;
     border-bottom: darkgray solid 1px;
 }
 
@@ -234,55 +224,34 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
     height: 12px;
 }
 
-.break_w{
-    height: 16px;
-}
-
-.break_l{
-    background: #EDEDED;
-    height: 24px;
-}
-
 .break_bottom{
     background: #EDEDED;
-    height: 100px;
+    height: 200px;
 }
 
 /*中间banner区域*/
 .banner_center{
-
     background: white;
-    height: 300px;
+    height: 200px;
 }
 
 .banner_center_l{
-    height: 70%;
-    width: 100%;
+    height: 160px;
+    margin: 20px;
 }
 
-.banner_center_l_cont{
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.banner_center_r_b p{
-    float: right;
-}
 .banner_center_r{
-    height: 20%;
-    width: 100%;
-    margin-top:0;
+    background: red;
+    height: 120px;
+    height: auto;
+    margin: 40px;
 }
 
 /*登录界面*/
 
 .login_contanter{
-    height: 1000px;
-    margin-top: 6%;
-    background-color: orange;
-    padding-top: 30px;
+    height: 500px;
+    margin-top: 14%;
 }
 .login_name{
     margin:20px auto;
@@ -298,48 +267,38 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
 }
 
 .login_btn{
-	height: 50px;
+    height: 50px;
     width: 100%;
     padding: 0 5px;
-	margin:0 auto;
-	font-size:18px;
-	
+    margin:0 auto;
+    font-size:18px;
+    
 }
 
 .login_btn a{
-	display:block;
-	line-height:50px;
-	width:100%;
-	height:50px;
+    display:block;
+    line-height:50px;
+    width:100%;
+    height:50px;
 }
 
 /*门禁系统*/
 
 .friend_list{
-    margin-top:10px;
-    height: 60px;
+    margin-top:10%;
+    height: 100px;
     width: 100%;
 
 }
 
 .friend_list_position{
     width: 80%;
-    height: 30%;
-    margin-left:auto;
-    margin-right:auto ;
-    margin-top: 20px;
+    height: 20%;
+    margin: 40px auto;
 }
 
 .friend_list_position p{
     font-size: 20px;
-}
-
-.acs_addfriends{
-    margin-top: 50px;
-}
-
-.acs_btn{
-    margin-top: 50px;
 }
 
 
@@ -359,58 +318,4 @@ body{display:-webkit-box;-webkit-box-orient:vertical; font-size: 62.5%;}
 
 .lifeservice_Class p{
     font-size: 20px;
-}
-
-/*网上下的css3按钮*/
-.button {
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font: 14px/100% Arial, Helvetica, sans-serif;
-    padding: .5em 2em .55em;
-    text-shadow: 0 1px 1px rgba(0,0,0,.3);
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    border-radius: .5em;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
-}
-.button:hover {
-    text-decoration: none;
-}
-.button:active {
-    position: relative;
-    top: 1px;
-}
-
-/*发送二维码页面*/
-.EWM{
-
-    margin-top: 0;
-    width: 100%;
-    height: 200px;
-
-}
-
-.EWM_contenar{
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: white;
-    border: black solid 1px;
-}
-
-.EWM_text{
-    width: 90%;
-    height: 50px;
-    margin-top: 50px;
-    margin-right: auto;
-    margin-left: auto;
-
-}
-.sendEWM{
-    margin: 10px auto;
 }

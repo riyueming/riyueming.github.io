@@ -7,16 +7,37 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/control.js"></script>
 </head>
 <body>
 
-    <nav class="nav_top">
-        <div class="bottom_l fl">
-            <a href="index.html">
-                 <img src="images/icon/back.png">
-            </a>
+    <div class="container" id="container">
+
+        <div class="left_nav">
+            <div class="left_z_nav_div">
+                <div class="left_nav_div">
+                    <p class="text_YaHei text_size">导航</p>
+                </div>
+                <div class="left_nav_div">
+                    <p class="text_YaHei text_size">搜索</p>
+                </div>
+                <div class="left_nav_div">
+                    <a href="index.html"><p class="text_YaHei text_size">主页</p></a>
+                </div>
+                <div class="left_nav_div">
+                    <a href="home.html"><p class="text_YaHei text_size">我的</p></a>
+                </div>
+            </div>
         </div>
+
+
+
+    <nav class="nav_top">
+         <div class="top_l">
+                <br/>
+                <span id="btn">按钮</span>
+            </div>
         <div class="top_c">
              <p class="text_YaHei">我的信息</p>
         </div>
@@ -26,18 +47,9 @@
                 <p class="text_center text_YaHei">登录</p>
             </a>
         </div>
-    </nav>
+    </nav>  
 
-        <div class="home_banner">
-            <div class="home_uername fr">
-                <div class="leftArea">
-                    <img src="images/icon/user.png" width="40%" class="fr">
-                </div>
-                <p class="text_size text_YaHei">请登录</p>
-            </div>
-        </div>
-
-        <div class="contanter comWidth">
+        <div class="home_contanter comWidth">
 
             <div class="break comWidth fl">
 
@@ -101,27 +113,33 @@
 
         </div>
 
+    </div>
 
-        <nav class="nav_footer">
-            <div class="bottom_l fl">
-                <a href="index.html">
-                    <img src="images/icon/back.png">
-                    <p class="text_center text_YaHei">返回</p>
-                </a>
-            </div>
-            <div class="bottom_c">
-                <a href="index.html">
-                    <img src="images/icon/home.png">
-                    <p class="text_center text_YaHei">首页</p>
-                </a>
-            </div>
-            <div class="bottom_r fr">
-                <a href="home.html">
-                    <img src="images/icon/man.png">
-                    <p class="text_center text_YaHei">我的</p>
-                </a>
-            </div>
-        </nav>
+    <script>
+        $("#btn").bind("click",function(){
+            var conLeft = parseInt($("#container").css("left"));
+            if(conLeft == "0"){
+                $("#container").animate({
+                    left:"40%"
+                },500);
+            }else{
+                $("#container").animate({
+                    left:"0"
+                },500);
+            }
+        });
+        $("#container").on("swiperight",function(){
+            $("#container").animate({
+                left:"40%"
+            },500);
+        });
+        $("#container").on("swipeleft",function(){
+            $("#container").animate({
+                left:"0"
+            },500);
+        });
+    </script>
+
 
 </body>
 </html>
